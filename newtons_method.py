@@ -1,10 +1,7 @@
 import numexpr as ne
 
 
-def newtons_method():
-    x = float(input("Enter X0: "))
-    func = input("Enter the function: ")
-    derivative = input("Enter the function's derivative: ")
+def newtons_method(x, func, derivative):
     approxNum = int(input("n = ?: "))
     for i in range(approxNum):
         evalFunc = float(ne.evaluate(func))
@@ -14,4 +11,7 @@ def newtons_method():
 
 
 if __name__ == "__main__":
-    print(newtons_method())
+    a = float(input("Enter X0: "))
+    funct = input("Enter the function: ")
+    der = str(input("Enter the function's derivative: "))
+    print(newtons_method(a, funct, der))
